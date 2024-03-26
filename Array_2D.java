@@ -6,7 +6,7 @@ public class Array_2D {
             int matrix[][] = new int[3][3];
             int m = matrix.length, n = matrix[0].length;
             Scanner Joe = new Scanner(System.in);
-            System.out.println("enter the elements of matrix...");
+            System.out.println("Enter the elements of matrix...");
             for (int i = 0; i < m; i++) {
                   for (int j = 0; j < n; j++) {
                         matrix[i][j] = Joe.nextInt();
@@ -32,7 +32,7 @@ public class Array_2D {
                   for (int j = startCol; j <= endCol; j++) {
                         System.out.print(matrix[startRow][j] + " ");
                   }
-                  // left ...
+                  // Right ...
                   for (int i = startRow + 1; i <= endRow; i++) {
                         System.out.print(matrix[i][endCol] + " ");
                   }
@@ -77,7 +77,7 @@ public class Array_2D {
                   // primary diagonal ...
                   sum += matrix[i][i];
                   // secondary diagonal ...
-                  if (i != matrix.length - i - 1) {
+                  if (i != matrix.length - i - 1) { // If i != j 
                         sum += matrix[i][matrix.length - i - 1];
                   }
             }
@@ -130,19 +130,13 @@ public class Array_2D {
             }
       }
 
-      public static void machine(int a, int b){
-            
-      }
-
       public static void main(String args[]) {
             // int matrix[][]={{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
-            // // spiralMatrixPrint(matrix);
+            // spiralMatrixPrint(matrix);
             // diagonalSum(matrix);
             // int matrix1[][]={{10,20,30,40},{15,25,35,45},{27,29,37,48},{32,33,47,50}};
             // int key =33;
             // starCaseSearch(matrix1, key);
-            transposeMatrix();
-            // String str = "ApnaCollege".replace( "1","");
-            // System. out . println (str) ;
+            // transposeMatrix();
       }
 }

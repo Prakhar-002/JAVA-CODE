@@ -12,7 +12,7 @@ class ArraysFunc {
             arr2[1] = sc.nextInt();
             String fruits[] = { "apple", "banana", "orange" };
             for (int i = 0; i < arr1.length; i++) {
-                  System.out.print(arr1[i] + " ");
+                  System.out.print(arr1[i] + " ");         
             }
             System.out.println();
             for (int i = 0; i < fruits.length; i++) {
