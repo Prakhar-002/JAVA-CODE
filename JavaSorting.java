@@ -115,7 +115,7 @@ public class JavaSorting {
                   return;
             }
             //kam
-            int mid = Si +(Ei -Si)/2; // (Si + Ei)/2
+            int mid = Si +(Ei - Si)/2; // (Si + Ei)/2
             mergeSort(arr, Si, mid);  // left part will sort
             mergeSort(arr, mid+1, Ei);// right part will sort
             merge(arr, Si, mid, Ei);
@@ -130,7 +130,7 @@ public class JavaSorting {
             int k = 0;   // iterator for temp 
 
             while( i <= mid && j <=ei){
-                  if(arr[i] <arr [j]){
+                  if(arr[i] < arr [j]){
                         temp[k] = arr[i];
                         i++;
                   }else{
@@ -148,7 +148,7 @@ public class JavaSorting {
                   temp[k++] = arr[j++];
             }
             // copy temp into array ...
-            for(k=0 , i=si ;k <temp.length; i++,k++){
+            for(k=0 , i=si; k <temp.length; i++,k++){
                   arr[i] = temp[k];
             }
 
@@ -162,7 +162,7 @@ public class JavaSorting {
       //quick sort ... in avg case time complexity is O(n log n) and space complexity is O(1)
       // in worst case it's time Complexity is O(n square)
       
-      public static void quickSort(Integer arr[], int si ,int ei){
+      public static void quickSort(Integer arr[], int si, int ei){
             if(si >= ei){
                   return;
             }
@@ -180,7 +180,7 @@ public class JavaSorting {
             int pivot = arr[ei]; // last element as a pivot ...
             int i = si-1;       // taking i as -1...
 
-            for( int j = si ;j < ei ; j++){
+            for( int j = si; j < ei; j++){
                   if(arr[j] <= pivot){
                         i++;
                         // swap 

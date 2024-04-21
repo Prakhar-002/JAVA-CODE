@@ -1,23 +1,22 @@
 public class JavaDoublyLL {
-      public class  Node {
+      public class Node {
             int data;
             Node next;
             Node prev;
 
             // constructor
             public Node(int data){
-                  this.data =data;
-                  next =null;
-                  prev=null;
+                  this.data = data;
+                  next = null;
+                  prev = null;
             } 
       }
 
 // ----------------------------------------------------------------------------------------
 
-
-      public static Node head =null;
+      public static Node head = null;
       public static Node tail = null;
-      public static int size =0;
+      public static int size = 0;
 
       public void addFirst(int data){
             Node newNode = new Node(data);
@@ -34,23 +33,22 @@ public class JavaDoublyLL {
 
 // ----------------------------------------------------------------------------------------
 
-
       public void removeFirst(){
             if(head == null){
-                  System.out.println("empty linked list...");
+                  System.out.println("Empty linked list...");
                   return;
             }
 
             if(size == 1){
-                  System.out.println("removed data is :"+head.data);
+                  System.out.println("Removed data is :" + head.data);
                   head = tail = null;
-                  size --;
+                  size--;
                   return;
             }
 
-            System.out.println("removed data is : "+head.data);
+            System.out.println("Removed data is : " + head.data);
             head = head.next;
-            head.prev= null;
+            head.prev = null;
             size--;
       }
 
@@ -61,20 +59,19 @@ public class JavaDoublyLL {
                   System.out.println("doubly linked list is not available...");
                   return;
             }
-            System.out.println("removed data is : "+tail.data );
-            tail =tail.prev;
+            System.out.println("removed data is : " + tail.data );
+            tail = tail.prev;
             tail.next = null;
             size--;
       }
 
 // ----------------------------------------------------------------------------------------
 
-
       public void print(){
             Node temp = head;
             System.out.print("null <-> ");
             while (temp != null) {
-                  System.out.print(temp.data +" <-> ");
+                  System.out.print(temp.data + " <-> ");
                   temp= temp.next;
             }System.out.println("null");
       }
@@ -89,7 +86,7 @@ public class JavaDoublyLL {
             while(cur != null){
                   next = cur.next;
                   cur.next = prev;
-                  cur.prev =next;
+                  cur.prev = next;
 
                   prev = cur ;
                   cur = next;

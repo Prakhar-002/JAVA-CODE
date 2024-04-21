@@ -48,7 +48,7 @@ public class Backtracking {
 
       // ------------------------------------------------------------------------------------
 
-      // find permutation of string ...
+      // find permutation of string ... O( n * n! )
       public static void permutationString(String str, String ans) {
             // base case
             if (str.length() == 0) {
@@ -58,7 +58,7 @@ public class Backtracking {
             // recursion
             for (int i = 0; i < str.length(); i++) {
                   char cur = str.charAt(i);
-                  String newString = str.substring(0, i) + str.substring(i + 1);
+                  String newString = str.substring(0, i) + str.substring(i + 1); /* removing the selected element from actual string */
                   permutationString(newString, ans + cur);
             }
       }
@@ -84,20 +84,21 @@ public class Backtracking {
 
       // Is safe will check for the place of queen...
       public static Boolean isSafe(char chessBoard[][], int row, int col) {
-            // check for vertical
+            // check for vertical up
             for (int i = row - 1; i >= 0; i--) {
                   if (chessBoard[i][col] == 'Q') {
                         return false;
                   }
             }
 
-            // check for left vertical
+            // check for left up Diagonal
             for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
                   if (chessBoard[i][j] == 'Q') {
                         return false;
                   }
             }
-            // check for right vertical position
+
+            // check for right up Diagonal
             for (int i = row - 1, j = col + 1; i >= 0 && j < chessBoard.length; i--, j++) {
                   if (chessBoard[i][j] == 'Q') {
                         return false;
@@ -201,11 +202,11 @@ public class Backtracking {
             }
 
             // grid...
-            int startRow =(row/3)*3;
-            int startCol = (col/3)*3;
+            int startRow =(row / 3) * 3;
+            int startCol = (col / 3) * 3;
 
             for(int i=startRow; i<startRow+3;i++){
-                  for(int j =startCol ;j <startCol+3;j++){
+                  for(int j = startCol; j < startCol + 3; j++){
                         if(sudoku[i][j] == digit){
                               return false;
                         }
@@ -284,6 +285,5 @@ public class Backtracking {
             // 4...queenCall();
             // 5...gridWaysCall();
             // 6...sudokuCall();
-            queenCall();
       }
 }

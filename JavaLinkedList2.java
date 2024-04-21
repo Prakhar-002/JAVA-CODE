@@ -5,7 +5,8 @@ public class JavaLinkedList2 {
             Node next;
 
             public Node(int data){
-                  this.data =data;
+                  this.data = data;
+                  this.next = null;
             }
       }
 
@@ -15,7 +16,7 @@ public class JavaLinkedList2 {
 // -----------------------------------------------------------------------------------------
 
       public static boolean isCycle(){  // Floyd's cycle finder...
-            Node slow =head;
+            Node slow = head;
             Node fast = head;
 
             while (fast != null && fast.next != null) {
@@ -32,51 +33,49 @@ public class JavaLinkedList2 {
 
       public static void isCycleCall(){
             head = new Node(10);
-            head.next =new Node(20);
+            head.next = new Node(20);
             head.next.next = new Node(30);
             head.next.next.next = new Node(40);
-            head.next.next.next.next =head.next;
-            // head->10->20->30->head
+            head.next.next.next.next = head.next;
+            // head->10->20->30->{head->next(10)}
             System.out.println(isCycle());
       }
 
 // -----------------------------------------------------------------------------------------
       public static void removeCycleInLL(){
             // detect loop
-            Node slow =head;
-            Node fast= head;
-            Node prev =null;
+            Node slow = head;
+            Node fast = head;
+            Node prev = null;
 
-            while (fast !=null && fast.next != null) {
-                  slow =slow.next;
-                  fast =fast.next.next;
+            while (fast != null && fast.next != null) {
+                  slow = slow.next;
+                  fast = fast.next.next;
 
                   if(slow == fast ){ // we detect node 
-                        slow =head;
+                        slow = head;
                         while( slow != fast){
-                              slow =slow.next;
-                              prev= fast;
-                              fast =fast.next;
+                              slow = slow.next;
+                              prev = fast;
+                              fast = fast.next;
                         }
-                        prev.next =null;
+                        prev.next = null;
                         break;
                   }
             }
-
-            
       }
 
       public static void removeCycleInLL1(){
             // detect loop
-            Node slow =head;
-            Node fast= head;
-            boolean cycle =false;
+            Node slow = head;
+            Node fast = head;
+            boolean cycle = false;
 
-            while (fast !=null && fast.next != null) {
-                  slow =slow.next;
-                  fast =fast.next.next;
+            while (fast != null && fast.next != null) {
+                  slow = slow.next;
+                  fast = fast.next.next;
                   if(fast == slow ){ // we detect node 
-                        cycle =true;
+                        cycle = true;
                         break;
                   }
             }
@@ -86,16 +85,16 @@ public class JavaLinkedList2 {
             }
 
             // finding meeting point 
-            slow =head ;
-            Node prev =null ;// last node
-            while (slow !=fast) {
+            slow = head ; 
+            Node prev = null ;// last node
+            while (slow != fast) {
                   slow = slow.next;
-                  prev =fast ;
-                  fast =fast.next;
+                  prev = fast ;
+                  fast = fast.next;
             }
 
             // set last node null
-            prev.next =null;
+            prev.next = null;
       }
 
       public static void llCall(){
@@ -106,11 +105,8 @@ public class JavaLinkedList2 {
 
 // -----------------------------------------------------------------------------------------
 
-
-
-// -----------------------------------------------------------------------------------------
-
       public static void main(String[] args) {
-            
+            // 1...isCycleCall();
+            // 2...llCall();
       }
 }

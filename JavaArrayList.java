@@ -28,7 +28,8 @@ public class JavaArrayList {
             // output
             // add ->[10, 20, 30, 40]
 
-            list.add(1, 52);
+            // add element at index...O(n)
+            list.add(1, 52); 
             System.out.println("add ->" + list);
             // output
             // add ->[10, 52, 20, 30, 40]
@@ -80,7 +81,7 @@ public class JavaArrayList {
             // output
             // max is : 74
 
-            // sort in build... we need to import the collections
+            // sort in build... we need to import the (collections)
             System.out.println("Initial list :" + list);
             Collections.sort(list); // ascending order
             System.out.println("final list after sorting :" + list);
@@ -170,8 +171,7 @@ public class JavaArrayList {
                   }
                   System.out.println();
             }
-            // output is :
-            // [[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 6, 9, 12, 15]]
+            // output is -->
             // 1 2 3 4 5
             // 2 4 6 8 10
             // 3 6 9 12 15
@@ -203,7 +203,7 @@ public class JavaArrayList {
                   // cur = ht*width
                   int curWater = (rp - lp) * Math.min(height.get(rp), height.get(lp));
                   maxWater = Math.max(maxWater, curWater);
-                  // update ptr
+                  // update ptr ... move the smaller one ... area control by small height building
                   if (height.get(lp) < height.get(rp)) {
                         lp++;
                   } else {
@@ -239,21 +239,25 @@ public class JavaArrayList {
                   for (int j = i + 1; j < pair.size(); j++) {
                         if (pair.get(i) + pair.get(j) == sum) {
                               System.out.println("[" + pair.get(i) + "," + pair.get(j) + "]");
+                              return;
                         }
                   }
             }
-      }     // output 
+            System.out.println(sum + "Not Exist");
+      }    
+            // output 
             // [1,4]
             // [2,3]
 
       // 2 pointer approach...O(n)
-      public static void pairSumPointer(ArrayList<Integer> pair ,int sum){
-            int lp =0;
-            int rp =pair.size()-1;
-            while(lp!=rp){
+      public static void pairSumPointer(ArrayList<Integer> pair, int sum){
+            int lp = 0;
+            int rp = pair.size()-1;
+            while(lp != rp){
                   // case one 
                   if(pair.get(lp) + pair.get(rp) == sum){
-                              System.out.println("["+pair.get(lp)+","+ pair.get(rp)+"]");
+                        System.out.println("[" + pair.get(lp) + "," + pair.get(rp) + "]");
+                        return;
                   }
                   // case two
                   if(pair.get(lp) + pair.get(rp) < sum){
@@ -263,6 +267,7 @@ public class JavaArrayList {
                         rp--;
                   }
             }
+            System.out.println(sum + "Not Exist");
       }     // output 
             // [1,4]
             // [2,3]
@@ -288,20 +293,21 @@ public class JavaArrayList {
 
       public static void PairSumTwo(ArrayList<Integer> pair,int sum){  // O(n)
             // finding pivot for this arrayList
-            int pivot =-1;
+            int pivot = -1;
             for (int i = 0; i < pair.size(); i++) {
                   if(pair.get(i) > pair.get(i+1)){
-                        pivot =i;
+                        pivot = i;
                         break;
                   }
             }
             // we'll find sum pair now...
-            int lp =pivot+1;
-            int rp =pivot-1;
-            while(lp!=rp){
+            int lp = pivot + 1;
+            int rp = pivot;
+            while(lp != rp){
                   // case one 
                   if(pair.get(lp) + pair.get(rp) == sum){
-                        System.out.println("["+pair.get(lp)+","+ pair.get(rp)+"]");
+                        System.out.println("[" + pair.get(lp) + "," + pair.get(rp) + "]");
+                        return;
                   }
                   // case two
                   if(pair.get(lp) + pair.get(rp) < sum){
@@ -311,6 +317,7 @@ public class JavaArrayList {
                         rp = (pair.size() + rp -1) % pair.size();  // rp =(n +rp -1)%n
                   }
             }
+            System.out.println("ERROR " + sum + " Not Found");
       }
 
       public static void pairSum2Call() {

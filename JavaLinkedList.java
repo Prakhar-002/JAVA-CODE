@@ -7,6 +7,7 @@ public class JavaLinkedList {
             // constructor
             public Node(int data) {
                   this.data = data;
+                  this.next = null;
             }
       }
 
@@ -255,6 +256,7 @@ public class JavaLinkedList {
             }
             return true;
       }
+
 // -----------------------------------------------------------------------------------------
       public void ZigZag(){
             // find mid 
@@ -270,7 +272,7 @@ public class JavaLinkedList {
             // reverse the 2nd half of list 
             // current
             Node cur = mid.next;
-            // divide into 2 parts 
+            // reverse
             mid.next = null;
             Node prev = null;
             Node next ;
@@ -281,24 +283,24 @@ public class JavaLinkedList {
                   cur = next;
             }
 
-            // zig zag merge 
+            // divide into 2 parts 
             Node headL = head ;
             Node headR = prev ;
 
             // taking two variable 
-            Node nextL ,nextR ;
+            Node nextL, nextR;
 
-            // reverse 
+            // zig zag merge 
             while(headL != null && headR != null ){
                   nextL = headL.next ; // initializing nextL
                   nextR = headR.next ; //initializing nextR
 
-                  headL.next =headR ;// zig zag
+                  headL.next = headR ;// zig zag
                   headR.next = nextL; // zig zag 
 
                   // update
-                  headL =nextL;
-                  headR =nextR;
+                  headL = nextL;
+                  headR = nextR;
             }
       }
 
@@ -329,14 +331,14 @@ public class JavaLinkedList {
       }
 
 // -----------------------------------------------------------------------------------------
-            // merge sort in linked list...
+      // merge sort in linked list...
       private Node getMid(Node head){
-            Node slow =head;
+            Node slow = head;
             Node fast = head.next; // for getting left part last node as a mid value
 
             while (fast !=null && fast.next!=null) {
-                  slow =slow.next;   //+1
-                  fast =fast.next.next; // +2
+                  slow = slow.next;   //+1
+                  fast = fast.next.next; // +2
             }
 
             return slow;  // mid value
@@ -349,26 +351,26 @@ public class JavaLinkedList {
 
             while (headL != null && headR != null) { // WE'll merge the data after the sort 
                   if(headL.data <= headR.data){
-                        temp.next =headL;
-                        headL =headL.next;
-                        temp =temp.next;
+                        temp.next = headL;
+                        headL = headL.next;
+                        temp = temp.next;
                   }else{
-                        temp.next =headR;
-                        headR =headR.next;
-                        temp=temp.next;
+                        temp.next = headR;
+                        headR = headR.next;
+                        temp = temp.next;
                   }
             }
 
             while (headL != null) { // remaining part of first linked list...
-                  temp.next =headL;
-                  headL =headL.next;
-                  temp =temp.next;
+                  temp.next = headL;
+                  headL = headL.next;
+                  temp = temp.next;
             }
 
             while (headR !=null) {  // remaining part of second linked list...
-                  temp.next =headR;
-                  headR =headR.next;
-                  temp=temp.next;
+                  temp.next = headR;
+                  headR = headR.next;
+                  temp = temp.next;
             }
 
             return mergedList.next;
@@ -382,12 +384,12 @@ public class JavaLinkedList {
             // find mid
             Node midNode = getMid(head);
             Node rightHead = midNode.next; // store right head part in a variable
-            midNode.next =null; // dividing ll in two parts 
+            midNode.next = null; // dividing ll in two parts 
 
             // merge fun call for left part
-            Node newLeft =mergeSort(head);
+            Node newLeft = mergeSort(head);
             // merge fun call for right part
-            Node newRight =mergeSort(rightHead); 
+            Node newRight = mergeSort(rightHead); 
 
             // calling merge function for sorted list to merge all these...
             return merge(newLeft, newRight);
@@ -404,7 +406,7 @@ public class JavaLinkedList {
             // adding at an index
             list.add(0, 75);
             list.print();
-            list.head =list.mergeSort(list.head);
+            // list.head = list.mergeSort(list.head);
             list.print();
             list.ZigZag();
             list.print();

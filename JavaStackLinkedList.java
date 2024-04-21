@@ -5,27 +5,27 @@ public class JavaStackLinkedList {
             int data;
             Node next;
             Node(int data){
-                  this.data=data;
+                  this.data = data;
                   this.next = null;
             }
       }
       static class StackBasic {
-            static Node head =null;
+            static Node head = null;
 
-            //isEmpty 
+            // isEmpty 
             static boolean isEmpty(){
                   return head == null;
             }
 
             // push 
             static void push(int data){
-                  Node newNode =new Node(data);
+                  Node newNode = new Node(data);
                   if(isEmpty()){
-                        head= newNode;
+                        head = newNode;
                         return;
                   }
                   newNode.next = head;
-                  head =newNode;
+                  head = newNode;
             }
 
             // pop
@@ -34,7 +34,7 @@ public class JavaStackLinkedList {
                         return -1;
                   }
                   int top = head.data;
-                  head= head.next;
+                  head = head.next;
                   return top;
             }
 
@@ -48,8 +48,8 @@ public class JavaStackLinkedList {
       }
 
       public static void stackCall(){
-            //StackBasic s= new StackBasic();  // -->trough basics
-            Stack<Integer> s =new Stack<>();   // --> in build Stack
+            // StackBasic s = new StackBasic();  // -->trough basics
+            Stack<Integer> s = new Stack<>();   // --> in build Stack
 
             s.push(10);
             s.push(50);
@@ -61,7 +61,7 @@ public class JavaStackLinkedList {
             }
       }
 
-      public static void pushBottom(Stack<Integer> s,int data){
+      public static void pushBottom(Stack<Integer> s, int data){
             if(s.isEmpty()){
                   s.push(data);
                   return;
@@ -73,7 +73,7 @@ public class JavaStackLinkedList {
       }
 
       public static void pushBottomCall(){
-            Stack<Integer> s =new Stack<>();   // --> in build Stack
+            Stack<Integer> s = new Stack<>();   // --> in build Stack
             s.push(10);
             s.push(20);
             s.push(30);
@@ -93,9 +93,9 @@ public class JavaStackLinkedList {
 
       public static String reverseString(String str){
             Stack <Character> s = new Stack<>();
-            int idx =0;
+            int idx = 0;
             // copy data into stack
-            while (idx <str.length()) {
+            while (idx < str.length()) {
                   s.push(str.charAt(idx));
                   idx++;
             }
@@ -120,13 +120,13 @@ public class JavaStackLinkedList {
                   return;
             }
 
-            int top =s.pop();
+            int top = s.pop();
             reverseStack(s);
-            pushBottom(s,top);
+            pushBottom(s, top);
       }
 
       public static void reverseStackCall(){
-            Stack<Integer> s =new Stack<>();   // --> in build Stack
+            Stack<Integer> s = new Stack<>();   // --> in build Stack
             System.out.println("before");
             s.push(10);
             s.push(20);
@@ -146,21 +146,22 @@ public class JavaStackLinkedList {
                   System.out.println(s.pop());
             }
       }
+
 //---------------------------------------------------------------------------------------
-      public static void  stockStack(int stock[] , int span[]){
+      public static void stockStack(int stock[] , int span[]){
             Stack<Integer> s = new Stack<>();
             span[0] = 1;
             s.push(0);
 
-            for(int i = 1 ;i<stock.length;i++){
+            for(int i = 1; i<stock.length; i++){
                   int curPrice = stock[i];
-                  while(!s.isEmpty() && curPrice >stock[s.peek()]){
+                  while(!s.isEmpty() && curPrice > stock[s.peek()]){
                         s.pop();
                   }
                   if(s.isEmpty()){
                         span[i] = i+1;
                   }else{
-                        int prevHeight =s.peek();
+                        int prevHeight = s.peek();
                         span[i] = i-prevHeight;
                   }
 
@@ -168,10 +169,9 @@ public class JavaStackLinkedList {
             }
       }
 
-
       public static void stockStackCall(){
             int stock[] = {100, 80 ,60,70,80,85,100};
-            int span[] =new int[stock.length];
+            int span[] = new int[stock.length];
             stockStack(stock , span);
 
             // print the span
@@ -183,13 +183,13 @@ public class JavaStackLinkedList {
 
 //---------------------------------------------------------------------------------------
       public static void nextGreater(){
-            int arr[] ={6 ,8, 0 ,1 , 3};
+            int arr[] = {6 ,8, 0 ,1 , 3};
             Stack <Integer> s = new Stack<>();
-            int nextGreater [] = new int[arr.length];
+            int nextGreater[] = new int[arr.length];
 
-            for(int i = arr.length-1 ;i >=0 ; i--){
+            for(int i = arr.length-1; i >= 0; i--){
                   // 1 while
-                  while(!s.isEmpty() && arr[s.peek()] <=arr[i]){
+                  while(!s.isEmpty() && arr[s.peek()] <= arr[i]){
                         s.pop();
                   }
 
@@ -206,22 +206,22 @@ public class JavaStackLinkedList {
 
             // print nextGreater
             for (int i = 0; i < nextGreater.length; i++) {
-                  System.out.print(nextGreater[i] +" ");
+                  System.out.print(nextGreater[i] + " ");
             }
             System.out.println();
 
             // more que
-            // next greater right  int i = arr.length-1 ;i >=0 ; i--
-            // next greater left  int i = 0 ;i <arr.length ; i++
-            // next smaller left int i = 0 ;i <arr.length ; i++ && arr[s.peek()] >= arr[i]
-            // next smaller right int i = arr.length-1 ;i >=0 ; i-- && arr[s.peek()] >= arr[i]
+            // next greater right  int i = arr.length-1; i >=0 ; i--
+            // next greater left  int i = 0; i <arr.length ; i++
+            // next smaller left int i = 0; i <arr.length ; i++ && arr[s.peek()] >= arr[i]
+            // next smaller right int i = arr.length-1; i >=0 ; i-- && arr[s.peek()] >= arr[i]
       }
 
 //---------------------------------------------------------------------------------------
       public static boolean validParenthesis(String str){   //O(n)
             Stack <Character> s = new Stack<>();
 
-            for(int i =0 ;i< str.length() ;i++){
+            for(int i = 0; i< str.length(); i++){
                   char ch = str.charAt(i);
 
                   //opening 
@@ -233,9 +233,9 @@ public class JavaStackLinkedList {
                               return false;
                         }
 
-                        if(   (s.peek() == '(' && ch ==')' ) || // ()
-                              (s.peek() == '{' && ch =='}' ) || // {}
-                              (s.peek() == '[' && ch ==']' )) { // []
+                        if(   (s.peek() == '(' && ch == ')' ) || // ()
+                              (s.peek() == '{' && ch == '}' ) || // {}
+                              (s.peek() == '[' && ch == ']' )) { // []
                                     s.pop();
                               }else{
                                     return false;
@@ -244,14 +244,14 @@ public class JavaStackLinkedList {
             }
 
             if(s.isEmpty()){
-                  return true ;
+                  return true;
             }else{
                   return false;
             }
       }
 
       public static void validParenthesisCall(){
-            boolean ans =validParenthesis("({}(){})");
+            boolean ans = validParenthesis("({}(){})");
             if (ans) {
                   System.out.println("string is valid parenthesis...");
             }else{
@@ -268,14 +268,14 @@ public class JavaStackLinkedList {
 
                   // closing tag 
                   if(ch == ')'){
-                        int count =0 ;
-                        while(s.peek() != '('){  // !str.isEmpty() ->not necessary
+                        int count = 0 ;
+                        while(s.peek() != '('){  // !str.isEmpty() -> not necessary
                               count++;
                               s.pop();
                         }
 
-                        if(count <1){  // duplicate condition
-                              System.out.println(str+" -- It is a duplicate parentheses ");
+                        if(count < 1){  // duplicate condition
+                              System.out.println(str + " -- It is a duplicate parentheses ");
                               return;
                         }else{
                               s.pop();  // opening pair remove
@@ -294,7 +294,6 @@ public class JavaStackLinkedList {
             duplicateParentheses("((a+b)+(o-k)+(l-k))");  // true
       }
 
-
 //---------------------------------------------------------------------------------------
       public static void maxHistogram(int arr[]){  //...O(n)
             int nsr[] = new int[arr.length];
@@ -302,25 +301,25 @@ public class JavaStackLinkedList {
             int maxArea =0;
             // next smaller right  ...O(n)
             Stack<Integer> s = new Stack<>();
-            for (int i = arr.length-1; i >=0; i--) {
+            for (int i = arr.length-1; i >= 0; i--) {
                   if(!s.isEmpty() && arr[s.peek()] >= arr[i]){
                         s.pop();
                   }
                   if(s.isEmpty()){
-                        nsr[i]= arr.length;
+                        nsr[i] = arr.length;
                   }else{
                         nsr[i] = s.peek();
                   }
                   s.push(i);
             }
             // next smaller left ...O(n)
-            s= new Stack<>();
+            s = new Stack<>();
             for (int i = 0; i <arr.length; i++) {
                   if(!s.isEmpty() && arr[s.peek()] >= arr[i]){
                         s.pop();
                   }
                   if(s.isEmpty()){
-                        nsl[i]= -1;
+                        nsl[i] = -1;
                   }else{
                         nsl[i] = s.peek();
                   }
@@ -329,11 +328,11 @@ public class JavaStackLinkedList {
             // current area  max area = j-i-1  ; nsr[i] - nsl[i] -1
             for (int i = 0; i < arr.length; i++) {   //...O(n)
                   int height = arr[i];
-                  int width = nsr[i] - nsl[i] -1;
+                  int width = nsr[i] - nsl[i] - 1;
                   int curArea = height*width;
                   maxArea = Math.max(maxArea, curArea);
             }
-             // print 
+            // print 
             System.out.println("max histogram area is : "+maxArea);
       }
 
