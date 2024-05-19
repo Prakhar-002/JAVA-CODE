@@ -1,19 +1,19 @@
 import java.util.*;
 
-public class JavaTree {
+public class JavaBinaryTreePart2 {
       static class Node{
             int data;
             Node left;
             Node right;
 
             Node(int data){
-                  this.data =data ;
-                  this.left =null;
-                  this.right =null;
+                  this.data = data ;
+                  this.left = null;
+                  this.right = null;
             }
       }
 
-      public static boolean isIdentical(Node node , Node subNode){
+      public static boolean isIdentical(Node node, Node subNode){
             if (node == null && subNode == null) {
                   return true ;
             }else if (node == null || subNode == null || node.data != subNode.data) {
@@ -32,7 +32,7 @@ public class JavaTree {
 
       }
 
-      public static boolean isSubTree(Node root , Node subTree){
+      public static boolean isSubTree(Node root, Node subTree){
             if (root == null) {
                   return false;
             }
@@ -62,7 +62,7 @@ public class JavaTree {
             Queue<Info> q = new LinkedList<>();
             HashMap<Integer , Node> map = new HashMap<>();
 
-            int min = 0,max = 0;
+            int min = 0, max = 0;
             q.add(new Info(root, 0));
             q.add(null);
 
@@ -75,7 +75,7 @@ public class JavaTree {
                         }else{
                               q.add(null);
                         }
-                  }else{
+                  } else {
 
                         if (!map.containsKey(cur.hd)) {  // first time occurring ...
                               map.put(cur.hd, cur.node);
@@ -94,22 +94,22 @@ public class JavaTree {
             }
 
             // printing...
-            for(int i = min ; i<=max ; i++){
-                  System.out.print(map.get(i).data +" ");
+            for(int i = min; i <= max; i++){
+                  System.out.print(map.get(i).data + " ");
             }
             System.out.println();
       }
 
 //---------------------------------------------------------------------------------------------
 
-      public static void kLevel(Node root ,int level ,int k){
+      public static void kLevel(Node root, int level, int k){
             if (root == null) {
-                  System.out.println("no K level found...");
+                  System.out.println("No K level found...");
                   return;
             }
 
             if(level == k){
-                  System.out.print(root.data +" ");
+                  System.out.print(root.data + " ");
                   return;
             }
 
@@ -119,7 +119,7 @@ public class JavaTree {
 
 //---------------------------------------------------------------------------------------------
 
-      public static boolean getPath(Node root ,int n ,ArrayList<Node> path){
+      public static boolean getPath(Node root, int n, ArrayList<Node> path){
             if (root == null) {
                   return false;
             }
@@ -137,7 +137,7 @@ public class JavaTree {
                   return true;
             }
 
-            path.remove(path.size()-1);
+            path.remove(path.size()-1);  
             return false;
       }
 

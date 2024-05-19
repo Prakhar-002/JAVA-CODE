@@ -1,15 +1,16 @@
 import java.util.ArrayList;
 
-class JavaBinaryTreePart2 {
-      
+class JavaBinarySearchTreePart2 {
 
       static class Node {
-            int data ;
-            Node left ;
+            int data;
+            Node left;
             Node right;
 
             public Node(int data){
                   this.data = data;
+                  this.left = null;
+                  this.right = null;
             }
       }
 
@@ -18,14 +19,14 @@ class JavaBinaryTreePart2 {
                   return;
             }
 
-            System.out.print(root.data+" ");
+            System.out.print(root.data + " ");
             preOrder(root.left);
             preOrder(root.right);
       }
 
 //--------------------------------------------------------------------------------------------------------
 
-      public static Node createBST(int arr[] , int st, int end){
+      public static Node createBST(int arr[], int st, int end){
             if (st > end) {
                   return null;
             }
@@ -38,8 +39,8 @@ class JavaBinaryTreePart2 {
       }
 
       public static Node arrayToBalanceBST(){
-            int arr[] ={3, 5, 6, 8, 10, 11, 13};
-            Node root =createBST(arr, 0, arr.length-1);
+            int arr[] = {3, 5, 6, 8, 10, 11, 13};
+            Node root = createBST(arr, 0, arr.length-1);
             return root;
       }
 
@@ -67,7 +68,7 @@ class JavaBinaryTreePart2 {
             // given BST...
       }
 
-      public static void getInOrder(Node root , ArrayList<Integer> inOrder){
+      public static void getInOrder(Node root, ArrayList<Integer> inOrder){
             if (root == null) {
                   return;
             }
@@ -115,13 +116,13 @@ class JavaBinaryTreePart2 {
 
             return root;
 
-            //                 50
-            //             /        \
-            //           30          60
-            //         /   \       /    \
-            //        5     20   45     70
-            //                         /  \
-            //                        65  80
+            //            50
+            //        /        \
+            //      30          60
+            //    /   \       /    \
+            //   5     20   45     70
+            //                    /  \
+            //                   65  80
       }
 
       static class Info{
@@ -151,11 +152,11 @@ class JavaBinaryTreePart2 {
             Info rightInfo = largestBST(root.right);
 
             //my details...
-            int size = leftInfo.size + rightInfo.size +1;
+            int size = leftInfo.size + rightInfo.size + 1;
             int min = Math.min(root.data , Math.min(leftInfo.min , rightInfo.min));
             int max = Math.max(root.data , Math.max(leftInfo.max , rightInfo.max));
 
-            if (root.data <=leftInfo.max || root.data >= rightInfo.min ) {
+            if (root.data <= leftInfo.max || root.data >= rightInfo.min ) {
                   return new Info(false , size , min , max);
             }
 

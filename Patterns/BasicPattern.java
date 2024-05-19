@@ -1,5 +1,5 @@
 import java.util.*;
-public class Pattern_1 {
+public class BasicPattern {
       public static void main (String args[]){
             Scanner sc=new Scanner (System.in);
             System.out.println("Enter a number ...");
@@ -16,6 +16,7 @@ public class Pattern_1 {
                   System.out.println();
 
             }
+
             // *
             // **
             // ***
@@ -50,9 +51,5 @@ public class Pattern_1 {
             // int apple=t.nextInt();
             // System.out.println(apple);
             sc.close();
-
-
-
-
       }
 }

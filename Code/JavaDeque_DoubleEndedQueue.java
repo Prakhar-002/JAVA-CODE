@@ -13,12 +13,12 @@ public class JavaDeque_DoubleEndedQueue{
             System.out.println(deque);
 
             // remove...
-            System.out.println("removeFirst--> "+deque.removeFirst());
-            System.out.println("removeLast--> "+deque.removeLast());
+            System.out.println("removeFirst--> " + deque.removeFirst());
+            System.out.println("removeLast--> " + deque.removeLast());
 
             // getting...
-            System.out.println("getFirst--> "+deque.getFirst());
-            System.out.println("getLast--> "+deque.getLast());
+            System.out.println("getFirst--> " + deque.getFirst());
+            System.out.println("getLast--> " + deque.getLast());
 
             System.out.println(deque);
       }
@@ -53,7 +53,7 @@ public class JavaDeque_DoubleEndedQueue{
             s.push(15);
 
             for (int i = 1; i < 4; i++) {
-                  System.out.println(i+ " peek is --> "+ s.peek());
+                  System.out.println(i + " peek is --> " + s.peek());
                   s.pop();
             }
       }
@@ -88,7 +88,7 @@ public class JavaDeque_DoubleEndedQueue{
             q.add(41);
 
             for (int i = 1; i < 4; i++) {
-                  System.out.println(i+ " peek is --> "+ q.peek());
+                  System.out.println(i + " peek is --> " + q.peek());
                   q.remove();
             }
       }
@@ -96,7 +96,7 @@ public class JavaDeque_DoubleEndedQueue{
 //-----------------------------------------------------------------------------------------------
 
       public static void main(String[] args) {
-            System.out.println("Welcome to the wold of Deque...");
+            System.out.println("Welcome to the world of Deque...");
             // 1...deque();
             // 2...StackDequeCall();
             // 3...QueueDequeCall();

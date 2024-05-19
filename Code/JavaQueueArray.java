@@ -81,18 +81,18 @@ static class CircularQueueArray {
 
             // is empty
             public boolean isEmpty() {
-                  return rear == -1 && front ==-1;
+                  return rear == -1 && front == -1;
             }
 
             // is full
             public boolean isFull(){
-                  return (rear+1)%size == front;  // agr next index pr front hai rear ke to full hai
+                  return (rear + 1) % size == front;  // agr next index pr front hai rear ke to full hai
             }
 
             // add
             public void add(int data) {  //O(1)
                   if (isFull()) {
-                        System.out.println("queue is full...");
+                        System.out.println("Queue is full...");
                         return;
                   }
                   // first element condition
@@ -107,14 +107,14 @@ static class CircularQueueArray {
             // remove
             public int remove() { //O(1)
                   if (isEmpty()) {
-                        System.out.println("queue is empty...");
+                        System.out.println("Queue is empty...");
                         return -1;
                   }
                   int result = arr[front];
-                  if (rear ==front ) {
+                  if (rear == front ) {
                         front = rear = -1;   // if all value deleted...
                   }else{
-                        front = (front +1)% size;
+                        front = (front + 1) % size;
                   }
                   return result;
             }

@@ -72,6 +72,7 @@ public class JavaQueueLinkedList {
                   ql.remove();
             }
       }
+
 //-----------------------------------------------------------------------------
       // queue by java collection frame works...
       public static void queueJCF(){
@@ -79,13 +80,14 @@ public class JavaQueueLinkedList {
             Queue<Integer> q = new ArrayDeque<>();
             q.add(10);
             q.add(75);
-            q.add(786);
+            q.add(78);
 
             while (!q.isEmpty()) {
                   System.out.println(q.peek());
                   q.remove();
             }
       }
+
 //-----------------------------------------------------------------------------------------
       static class QueueByTwoStack{
             static Stack<Integer> s1 = new Stack<>();
@@ -133,7 +135,7 @@ public class JavaQueueLinkedList {
             }
       }
 
-      public static void twoStackQueueCall(){
+      public static void queueByTwoStackCall(){
             QueueByTwoStack q = new QueueByTwoStack();
             q.add(10);
             q.add(75);
@@ -146,7 +148,7 @@ public class JavaQueueLinkedList {
       }
 
 //------------------------------------------------------------------------------------------
-      static class TwoQueueStack{
+      static class StackByTwoQueue{
             static Queue<Integer> q1 = new LinkedList<>();
             static Queue<Integer> q2 = new LinkedList<>();
 
@@ -219,8 +221,8 @@ public class JavaQueueLinkedList {
             }
       }
 
-      public static void twoQueueStackCall(){
-            TwoQueueStack s = new TwoQueueStack();
+      public static void StackByTwoQueueCall(){
+            StackByTwoQueue s = new StackByTwoQueue();
             s.push(10);
             s.push(45);
             s.push(410);
@@ -234,7 +236,7 @@ public class JavaQueueLinkedList {
       public static void main(String[] args) {
             // 1...queueCall();
             // 2...queueJCF();
-            // 3...twoStackQueueCall();
-            // 4...twoQueueStackCall();
+            // 3...queueByTwoStackCall();
+            // 4...StackByTwoQueueCall();
       }
 }

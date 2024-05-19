@@ -298,7 +298,7 @@ public class JavaStackLinkedList {
       public static void maxHistogram(int arr[]){  //...O(n)
             int nsr[] = new int[arr.length];
             int nsl[] = new int[arr.length];
-            int maxArea =0;
+            int maxArea = 0;
             // next smaller right  ...O(n)
             Stack<Integer> s = new Stack<>();
             for (int i = arr.length-1; i >= 0; i--) {
@@ -329,7 +329,7 @@ public class JavaStackLinkedList {
             for (int i = 0; i < arr.length; i++) {   //...O(n)
                   int height = arr[i];
                   int width = nsr[i] - nsl[i] - 1;
-                  int curArea = height*width;
+                  int curArea = height * width;
                   maxArea = Math.max(maxArea, curArea);
             }
             // print 
