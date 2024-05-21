@@ -1,4 +1,4 @@
 # JAVA-CODE
 JAVA files ... (DSA)
 
-> This is my JAVA code files.
+> These are my JAVA code files.
