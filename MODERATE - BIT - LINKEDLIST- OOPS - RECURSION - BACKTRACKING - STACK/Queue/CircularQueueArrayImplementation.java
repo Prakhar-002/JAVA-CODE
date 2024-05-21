@@ -84,4 +84,8 @@ public class CircularQueueArrayImplementation {
 
       // ? Output
       //  1.
+      //     10
+      //     20
+      //     30
+      //     14
 }
