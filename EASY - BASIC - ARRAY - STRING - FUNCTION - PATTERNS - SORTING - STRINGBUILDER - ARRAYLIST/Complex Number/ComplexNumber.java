@@ -48,4 +48,11 @@ public class ComplexNumber {
             com.sub(4, 6);
             com.mul(4, 7);
       }
+
+      // ? Output
+      //  1.
+      //     7 + i6
+      //     3 + i0
+      //     -1 - i6
+      //     38 + i290
 }
