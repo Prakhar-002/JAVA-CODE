@@ -1,36 +1,36 @@
 import java.util.*;
 
-public class JavaBinaryTree {
+public class AllBinaryTree {
 
-      static class Node {
+      static class TreeNode {
             int data;
-            Node left;
-            Node right;
+            TreeNode left;
+            TreeNode right;
 
-            Node(int data) {
+            TreeNode(int data) {
                   this.data = data;
                   this.left = null;
                   this.right = null;
             }
       }
 
-      static class BinaryTree {
+      public static class BinaryTree {
             static int idx = -1;
 
-            public Node binaryBuild(int nodes[]) {
+            public TreeNode binaryBuild(int nodes[]) {
                   idx++;
                   if (nodes[idx] == -1) {
                         return null;
                   }
 
-                  Node newNode = new Node(nodes[idx]);
+                  TreeNode newNode = new TreeNode(nodes[idx]);
                   newNode.left = binaryBuild(nodes);
                   newNode.right = binaryBuild(nodes);
 
                   return newNode;
             }
 
-            public void preOrderTraversal(Node root) { // O(n)
+            public void preOrderTraversal(TreeNode root) { // O(n)
                   if (root == null) {
                         System.out.print("-1 ");
                         return;
@@ -40,37 +40,37 @@ public class JavaBinaryTree {
                   preOrderTraversal(root.right);
             }
 
-            public void inOrderTraversal(Node root) {
+            public void inOrderTraversal(TreeNode root) {
                   if (root == null) {
                         System.out.print("-1 ");
                         return;
                   }
-                  preOrderTraversal(root.left);
+                  inOrderTraversal(root.left);
                   System.out.print(root.data + " ");
-                  preOrderTraversal(root.right);
+                  inOrderTraversal(root.right);
             }
 
-            public void postOrderTraversal(Node root) {
+            public void postOrderTraversal(TreeNode root) {
                   if (root == null) {
                         System.out.print("-1 ");
                         return;
                   }
-                  preOrderTraversal(root.left);
-                  preOrderTraversal(root.right);
+                  postOrderTraversal(root.left);
+                  postOrderTraversal(root.right);
                   System.out.print(root.data + " ");
             }
 
-            public void levelOrderTraversal(Node root) { //O(n)
+            public void levelOrderTraversal(TreeNode root) { // O(n)
                   if (root == null) {
                         return;
                   }
 
-                  Queue<Node> q = new LinkedList<>();
+                  Queue<TreeNode> q = new LinkedList<>();
                   q.add(root);
                   q.add(null);
 
                   while (!q.isEmpty()) {
-                        Node curNode = q.remove();
+                        TreeNode curNode = q.remove();
                         if (curNode == null) {
                               System.out.println();
                               if (q.isEmpty()) {
@@ -90,7 +90,7 @@ public class JavaBinaryTree {
                   }
             }
 
-            public int heightOfTree(Node root) { // O(n)
+            public int heightOfTree(TreeNode root) { // O(n)
                   if (root == null) {
                         return 0;
                   }
@@ -99,7 +99,7 @@ public class JavaBinaryTree {
                   return Math.max(lh, rh) + 1;
             }
 
-            public int countOfNodes(Node root) { // O(n)
+            public int countOfNodes(TreeNode root) { // O(n)
                   if (root == null) {
                         return 0;
                   }
@@ -108,7 +108,7 @@ public class JavaBinaryTree {
                   return lc + rc + 1;
             }
 
-            public int sumOfNodes(Node root) { // O(n)
+            public int sumOfNodes(TreeNode root) { // O(n)
                   if (root == null) {
                         return 0;
                   }
@@ -119,7 +119,7 @@ public class JavaBinaryTree {
             }
 
             // 1st approach...
-            public int diameterOfTree(Node root) { // O(n^2)
+            public int diameterOfTree(TreeNode root) { // O(n^2)
                   if (root == null) {
                         return 0;
                   }
@@ -145,7 +145,7 @@ public class JavaBinaryTree {
                   }
             }
 
-            public Info diameterInfoTree(Node root) { // O(n)
+            public Info diameterInfoTree(TreeNode root) { // O(n)
                   if (root == null) {
                         return new Info(0, 0);
                   }
@@ -153,9 +153,8 @@ public class JavaBinaryTree {
                   Info rightInfo = diameterInfoTree(root.right);
 
                   int selfDiameter = Math.max(
-                        Math.max(leftInfo.diameter, rightInfo.diameter), 
-                        leftInfo.height + rightInfo.height + 1
-                  );
+                              Math.max(leftInfo.diameter, rightInfo.diameter),
+                              leftInfo.height + rightInfo.height + 1);
                   int selfHeight = Math.max(leftInfo.height, rightInfo.height) + 1;
 
                   return new Info(selfDiameter, selfHeight);
@@ -165,23 +164,23 @@ public class JavaBinaryTree {
       public static void preOrderTree() { // O(n)
             int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
             BinaryTree tree = new BinaryTree();
-            Node root = tree.binaryBuild(nodes);
+            TreeNode root = tree.binaryBuild(nodes);
             System.out.println("First root is --> " + root.data);
 
-            // traversal of preOrder...
-            System.out.println("Traversal of preOrder...");
+            // preOrder traversal...
+            System.out.println("preOrder traversal...");
             tree.preOrderTraversal(root);
 
-            // traversal of inOrder...
-            System.out.println("\nTraversal of inOrder...");
+            // inOrder traversal ...
+            System.out.println("\nInOrder traversal ...");
             tree.inOrderTraversal(root);
 
-            // traversal of postOrder...
-            System.out.println("\nTraversal of postOrder...");
+            // postOrder traversal...
+            System.out.println("\npostOrder traversal...");
             tree.postOrderTraversal(root);
 
-            // traversal of levelOrder...
-            System.out.println("\nTraversal of levelOrder...");
+            // levelOrder traversal...
+            System.out.println("\nlevelOrder traversal...");
             tree.levelOrderTraversal(root);
 
             System.out.println("Height of this tree is...");
@@ -207,4 +206,38 @@ public class JavaBinaryTree {
       public static void main(String[] args) {
             preOrderTree();
       }
+
+      //? Output
+      //  1. 
+      //*    First root is --> 1
+
+      //*    preOrder traversal...
+      //     1 2 4 -1 -1 5 -1 -1 3 -1 6 -1 -1
+
+      // *   InOrder traversal ...
+      //     -1 4 -1 2 -1 5 -1 1 -1 3 -1 6 -1
+
+      //*    postOrder traversal...
+      //     -1 -1 4 -1 -1 5 2 -1 -1 -1 6 3 1
+
+      //*    levelOrder traversal...
+      //     1
+      //     2 3
+      //     4 5 6
+
+      // *   Height of this tree is...
+      //     3
+
+      //*    Count of node of this tree is...
+      //     6
+
+      //*    sum of node of this tree is...
+      //     21
+
+      //*    Diameter of this tree is...
+      //     5
+
+      // *   Diameter of this tree by Info class is...
+      //     Diameter is : --> 5
+      //     Max Height is : --> 3
 }
