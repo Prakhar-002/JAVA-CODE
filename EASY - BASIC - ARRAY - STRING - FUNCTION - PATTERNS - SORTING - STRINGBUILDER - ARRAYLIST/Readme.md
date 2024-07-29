@@ -6,8 +6,30 @@
 
 </br>
 
-      ♻️ EASY ♻️            
-            ├── Array
+      ♻️ EASY ♻️      
+            ├──🔹Java Basic
+            |   |
+            │   └──🔸Java Basic 🪶      
+            |   
+            ├──🔹Patterns
+            |   | 
+            |   ├──🔸BasicPattern 🪶
+            │   └──🔸Patterns 🪶
+            |   
+            ├──🔹Functions
+            |   |
+            |   ├──🔸Bin To Dec 🪶
+            |   ├──🔸Dec To Bin  🪶
+            |   ├──🔸Functions  🪶
+            |   ├──🔸NCR  🪶
+            |   ├──🔸NumPrime  🪶 
+            │   └──🔸Prime  🪶
+            |   
+            ├──🔹Complex Number
+            |   | 
+            │   └──🔸Complex Number 🪶
+            |   
+            ├──🔹Array
             |   |
             |   ├──🔸Array 2D 🪶
             |   ├──🔸Array Functions 🪶
@@ -24,36 +46,14 @@
             |   ├──🔸SubArray 🪶 
             │   └──🔸Transpose Matrix 🪶
             |   
-            ├── Array List
+            ├──🔹Array List
             |   |
             |   ├──🔸Java ArrayList Imp. 🪶
             |   ├──🔸MultiDimension ArrayList 🪶
             |   ├──🔸Swap Func 🪶 
             │   └──🔸Water Container 🪶
             |   
-            ├── Complex Number
-            |   | 
-            │   └──🔸Complex Number 🪶
-            |   
-            ├── Functions
-            |   |
-            |   ├──🔸Bin To Dec 🪶
-            |   ├──🔸Dec To Bin  🪶
-            |   ├──🔸Functions  🪶
-            |   ├──🔸NCR  🪶
-            |   ├──🔸NumPrime  🪶 
-            │   └──🔸Prime  🪶
-            |   
-            ├── Java Basic
-            |   |
-            │   └──🔸Java Basic 🪶
-            |   
-            ├── Patterns
-            |   | 
-            |   ├──🔸BasicPattern 🪶
-            │   └──🔸Patterns 🪶
-            |   
-            ├── Sorting
+            ├──🔹Sort Algorithm
             |   | 
             |   ├──🔸Bubble Sort 🪶
             |   ├──🔸Modified Bubble 🪶
@@ -66,7 +66,7 @@
             |   ├──🔸Inbuilt Sort 🪶
             |   └──🔸Search In Rotated Array 🪶
             |   
-            ├── Strings
+            ├──🔹Strings
             |   |
             |   ├──🔸String Basic 🪶
             |   ├──🔸String Equal Check 🪶
@@ -75,7 +75,7 @@
             |   ├──🔸Sub String 🪶
             │   └──🔸Compare String 🪶
             |   
-            ├── StringBuilder
+            ├──🔹StringBuilder
             |   |
             |   ├──🔸String Builder Basic 🪶
             |   ├──🔸First Upper Case 🪶
