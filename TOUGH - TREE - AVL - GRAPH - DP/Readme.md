@@ -11,19 +11,19 @@
             |   |
             |   ├──🔸All Binary Tree
             |   ├──🔸Binary Tree Build
+            |   ├──🔸In Order Traversal
+            |   ├──🔸Post Order Traversal
+            |   ├──🔸Pre Order Traversal
+            |   ├──🔸Level Order Traversal
             |   ├──🔸Count Of Nodes
             |   ├──🔸Diameter Of Tree
             |   ├──🔸Height Of Tree
-            |   ├──🔸InOrder Traversal
             |   ├──🔸IsIdentical
             |   ├──🔸K Level
             |   ├──🔸Kth Ancestor
             |   ├──🔸LCA
             |   ├──🔸Lowest Common Ancestor
             |   ├──🔸LCA Distance
-            |   ├──🔸Level Order Traversal
-            |   ├──🔸PostOrder Traversal
-            |   ├──🔸PreOrder Traversal
             |   ├──🔸Top View
             │   └──🔸Transform To Sum Tree
             |   
