@@ -1,6 +1,12 @@
+<h1 align="center"> 
 
+📜 TOPICS 📜
 
-      / ♻️ EASY ♻️            
+</h1>
+
+</br>
+
+      ♻️ EASY ♻️            
             ├── Array
             |   |
             |   ├──🔸Array 2D 🪶
@@ -15,46 +21,64 @@
             |   ├──🔸Reverse Array 🪶
             |   ├──🔸Spiral Matrix🪶
             |   ├──🔸Stair case search 🪶
-            |   ├──🔸SubArray 🪶
-            |   ├──🔸Transpose Matrix 🪶
-            |   ├──🔸 🪶
+            |   ├──🔸SubArray 🪶 
+            │   └──🔸Transpose Matrix 🪶
             |   
             ├── Array List
             |   |
             |   ├──🔸Java ArrayList Imp. 🪶
             |   ├──🔸MultiDimension ArrayList 🪶
-            |   ├──🔸Swap Func 🪶
-            |   ├──🔸Water Container 🪶
+            |   ├──🔸Swap Func 🪶 
+            │   └──🔸Water Container 🪶
             |   
-            └── Complex Number
-            |   |
-            |   ├──🔸Complex Number 🪶
+            ├── Complex Number
+            |   | 
+            │   └──🔸Complex Number 🪶
             |   
-            └── Functions
+            ├── Functions
             |   |
             |   ├──🔸Bin To Dec 🪶
             |   ├──🔸Dec To Bin  🪶
             |   ├──🔸Functions  🪶
             |   ├──🔸NCR  🪶
-            |   ├──🔸NumPrime  🪶
-            |   ├──🔸Prime  🪶
+            |   ├──🔸NumPrime  🪶 
+            │   └──🔸Prime  🪶
             |   
-            └── Java Basic
+            ├── Java Basic
             |   |
-            |   ├──🔸All July Question 🪶
+            │   └──🔸Java Basic 🪶
             |   
-            └── Patterns
-            |   |
-            |   ├──🔸All July Question 🪶
+            ├── Patterns
+            |   | 
+            |   ├──🔸BasicPattern 🪶
+            │   └──🔸Patterns 🪶
             |   
-            └── Sorting
-            |   |
-            |   ├──🔸All July Question 🪶
+            ├── Sorting
+            |   | 
+            |   ├──🔸Bubble Sort 🪶
+            |   ├──🔸Modified Bubble 🪶
+            |   ├──🔸Insertion Sort 🪶
+            │   ├──🔸Selection Sort 🪶
+            |   ├──🔸Merge Sort 🪶
+            |   ├──🔸Quick Sort 🪶
+            |   ├──🔸Counting Sort 🪶
+            |   ├──🔸Java Sorting 🪶
+            |   ├──🔸Inbuilt Sort 🪶
+            |   └──🔸Search In Rotated Array 🪶
             |   
-            └── StringBuilder
+            ├── Strings
             |   |
-            |   ├──🔸All July Question 🪶
+            |   ├──🔸String Basic 🪶
+            |   ├──🔸String Equal Check 🪶
+            |   ├──🔸Palindrome 🪶
+            |   ├──🔸Shortest Path From Origin 🪶
+            |   ├──🔸Sub String 🪶
+            │   └──🔸Compare String 🪶
             |   
-            └── Strings
+            ├── StringBuilder
             |   |
-            |   ├──🔸All July Question 🪶
+            |   ├──🔸String Builder Basic 🪶
+            |   ├──🔸First Upper Case 🪶
+            │   └──🔸String Compressor 🪶
+            |   
+            └── README.md
