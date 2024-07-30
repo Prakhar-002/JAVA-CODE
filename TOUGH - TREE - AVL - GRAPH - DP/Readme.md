@@ -38,14 +38,29 @@
             |   
             ├──🔹Hash
             |   |
+            |   ├──🔸Hash Map Basic
+            |   ├──🔸Hash Set Basics
+            |   ├──🔸Linked Hash Map Basic
+            |   ├──🔸Linked HashSet Basics
+            |   ├──🔸Tree Map Basic
+            |   ├──🔸Tree Set Basics
+            |   ├──🔸UnionAndIntersection
+            |   ├──🔸Is Anagram
+            |   ├──🔸Largest Sum Array
+            |   ├──🔸Count Distinct Element
+            |   ├──🔸Itinerary For Tickets
+            |   ├──🔸Majority Element
+            |   ├──🔸NSub Array Sum K 
             |   ├──🔸HeapSort
-            |   ├──🔸JavaHashMap
-            |   ├──🔸JavaHashMapCode
-            │   └──🔸JavaHashSet
+            │   └──🔸Java Hash Map Code Implementation
             |   
             ├──🔹Heap
             |   |
-            │   └──🔸JavaHeap
+            |   ├──🔸Heap Implementation
+            |   ├──🔸Max Cars Nearest
+            |   ├──🔸Connect Ropes
+            |   ├──🔸Weak Soldiers Row
+            │   └──🔸Sliding Window Max
             |   
             ├──🔹Trie
             |   | 
@@ -53,9 +68,9 @@
             |   
             ├──🔹Graph
             |   | 
-            |   ├──🔸JavaGraphs.java
-            |   ├──🔸JavaGraph_2.java
-            |   ├──🔸JavaGraph_3.java
-            |   └──🔸JavaGraph_4.java
+            |   ├──🔸JavaGraphs
+            |   ├──🔸JavaGraph_2
+            |   ├──🔸JavaGraph_3
+            |   └──🔸JavaGraph_4
             |   
             └── README.md
